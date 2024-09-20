@@ -7,6 +7,8 @@ show tables;
 create table cliente(
 id_cliente int(5) auto_increment,
 nome_cliente varchar(45) not null,
+sexo varchar (15),
+idade varchar (5),
 celular varchar(40),
 email varchar(40),
 cep int (8),
@@ -72,30 +74,30 @@ primary key (id_estoque),
 foreign key(id_livro) references livros(id_livro)
 );
 
-insert into cliente (nome_cliente,celular,email,cep,numero_residencia,cpf,mes_cadastro,senha)
+insert into cliente (nome_cliente, sexo, idade, celular, email, cep, numero_residencia, cpf, mes_cadastro, senha)
 values
-('João Silva', '11987654321', 'joao.silva@email.com', '01234567', '123', '123.456.789-00', '2024-09-08', 'senha123'),
-('Maria Oliveira', '21987654321', 'maria.oliveira@email.com', '23456789', '456', '234.567.890-11', '2024-07-24', 'maria2024'),
-('Carlos Souza', '31987654321', 'carlos.souza@email.com', '34567890', '789', '345.678.901-22', '2024-08-01', 'carlos@2024'),
-('Ana Costa', '41987654321', 'ana.costa@email.com', '45678901', '101', '456.789.012-33', '2024-07-12', 'ana2024'),
-('Pedro Santos', '51987654321', 'pedro.santos@email.com', '56789012', '202', '567.890.123-44', '2024-03-17', 'pedro1234'),
-('Lucas Pereira', '61987654321', 'lucas.pereira@email.com', '67890123', '303', '678.901.234-55', '2024-05-30', 'lucas123'),
-('Fernanda Almeida', '71987654321', 'fernanda.almeida@email.com', '78901234', '404', '789.012.345-66', '2024-01-12', 'fernanda@2024'),
-('Roberto Lima', '81987654321', 'roberto.lima@email.com', '89012345', '505', '890.123.456-77', '2024-04-16', 'roberto2024'),
-('Júlia Martins', '91987654321', 'julia.martins@email.com', '90123456', '606', '901.234.567-88', '2024-02-07', 'julia@2024'),
-('André Costa', '02987654321', 'andre.costa@email.com', '01234567', '707', '012.345.678-99', '2024-06-04', 'andre2024'),
-('Patrícia Rocha', '13987654321', 'patricia.rocha@email.com', '12345678', '808', '123.456.789-00', '2024-01-08', 'patricia2024'),
-('Gustavo Almeida', '23987654321', 'gustavo.almeida@email.com', '23456789', '909', '234.567.890-11', '2024-08-26', 'gustavo2024'),
-('Beatriz Fernandes', '33987654321', 'beatriz.fernandes@email.com', '34567890', '010', '345.678.901-22', '2024-08-20', 'beatriz2024'),
-('Rafael Oliveira', '43987654321', 'rafael.oliveira@email.com', '45678901', '121', '456.789.012-33', '2024-06-19', 'rafael2024'),
-('Juliana Silva', '53987654321', 'juliana.silva@email.com', '56789012', '232', '567.890.123-44', '2024-08-06', 'juliana2024'),
-('Marcos Souza', '63987654321', 'marcos.souza@email.com', '67890123', '343', '678.901.234-55', '2024-05-25', 'marcos2024'),
-('Sofia Lima', '73987654321', 'sofia.lima@email.com', '78901234', '454', '789.012.345-66', '2024-02-13', 'sofia2024'),
-('Eduardo Costa', '83987654321', 'eduardo.costa@email.com', '89012345', '565', '890.123.456-77', '2024-01-01', 'eduardo2024'),
-('Isabela Almeida', '93987654321', 'isabela.almeida@email.com', '90123456', '676', '901.234.567-88', '2024-03-04', 'isabela2024'),
-('Thiago Rocha', '04987654321', 'thiago.rocha@email.com', '01234567', '787', '012.345.678-99', '2024-03-04', 'thiago2024'),
-('Larissa Fernandes', '14987654321', 'larissa.fernandes@email.com', '12345678', '898', '123.456.789-00', '2024-04-10', 'larissa2024'),
-('Vinícius Santos', '24987654321', 'vinicius.santos@email.com', '23456789', '909', '234.567.890-11', '2024-08-13', 'vinicius2024');
+('João Silva', 'M', 30, '11987654321', 'joao.silva@email.com', '01234567', '123', '123.456.789-00', '2024-09-08', 'senha123'),
+('Maria Oliveira', 'F', 28, '21987654321', 'maria.oliveira@email.com', '23456789', '456', '234.567.890-11', '2024-07-24', 'maria2024'),
+('Carlos Souza', 'M', 32, '31987654321', 'carlos.souza@email.com', '34567890', '789', '345.678.901-22', '2024-08-01', 'carlos@2024'),
+('Ana Costa', 'F', 29, '41987654321', 'ana.costa@email.com', '45678901', '101', '456.789.012-33', '2024-07-12', 'ana2024'),
+('Pedro Santos', 'M', 35, '51987654321', 'pedro.santos@email.com', '56789012', '202', '567.890.123-44', '2024-03-17', 'pedro1234'),
+('Lucas Pereira', 'M', 27, '61987654321', 'lucas.pereira@email.com', '67890123', '303', '678.901.234-55', '2024-05-30', 'lucas123'),
+('Fernanda Almeida', 'F', 31, '71987654321', 'fernanda.almeida@email.com', '78901234', '404', '789.012.345-66', '2024-01-12', 'fernanda@2024'),
+('Roberto Lima', 'M', 33, '81987654321', 'roberto.lima@email.com', '89012345', '505', '890.123.456-77', '2024-04-16', 'roberto2024'),
+('Júlia Martins', 'F', 26, '91987654321', 'julia.martins@email.com', '90123456', '606', '901.234.567-88', '2024-02-07', 'julia@2024'),
+('André Costa', 'M', 34, '02987654321', 'andre.costa@email.com', '01234567', '707', '012.345.678-99', '2024-06-04', 'andre2024'),
+('Patrícia Rocha', 'F', 30, '13987654321', 'patricia.rocha@email.com', '12345678', '808', '123.456.789-00', '2024-01-08', 'patricia2024'),
+('Gustavo Almeida', 'M', 29, '23987654321', 'gustavo.almeida@email.com', '23456789', '909', '234.567.890-11', '2024-08-26', 'gustavo2024'),
+('Beatriz Fernandes', 'F', 25, '33987654321', 'beatriz.fernandes@email.com', '34567890', '010', '345.678.901-22', '2024-08-20', 'beatriz2024'),
+('Rafael Oliveira', 'M', 31, '43987654321', 'rafael.oliveira@email.com', '45678901', '121', '456.789.012-33', '2024-06-19', 'rafael2024'),
+('Juliana Silva', 'F', 27, '53987654321', 'juliana.silva@email.com', '56789012', '232', '567.890.123-44', '2024-08-06', 'juliana2024'),
+('Marcos Souza', 'M', 29, '63987654321', 'marcos.souza@email.com', '67890123', '343', '678.901.234-55', '2024-05-25', 'marcos2024'),
+('Sofia Lima', 'F', 32, '73987654321', 'sofia.lima@email.com', '78901234', '454', '789.012.345-66', '2024-02-13', 'sofia2024'),
+('Eduardo Costa', 'M', 36, '83987654321', 'eduardo.costa@email.com', '89012345', '565', '890.123.456-77', '2024-01-01', 'eduardo2024'),
+('Isabela Almeida', 'F', 28, '93987654321', 'isabela.almeida@email.com', '90123456', '676', '901.234.567-88', '2024-03-04', 'isabela2024'),
+('Thiago Rocha', 'M', 31, '04987654321', 'thiago.rocha@email.com', '01234567', '787', '012.345.678-99', '2024-03-04', 'thiago2024'),
+('Larissa Fernandes', 'F', 29, '14987654321', 'larissa.fernandes@email.com', '12345678', '898', '123.456.789-00', '2024-04-10', 'larissa2024'),
+('Vinícius Santos', 'M', 30, '24987654321', 'vinicius.santos@email.com', '23456789', '909', '234.567.890-11', '2024-08-13', 'vinicius2024');
 
 insert into livros (nome_livro,preco,editora) values
 ('O Hobbit', 29.90, 'HarperCollins'),
@@ -173,8 +175,27 @@ JOIN livros l ON lp.id_livro = l.id_livro
 JOIN pedido p ON lp.id_pedido = p.id_pedido
 JOIN nota_fiscal nf ON lp.idnota_fiscal = nf.idnota_fiscal;
 
+-- Selects aula  10.09
 select count(*) from pedido
 where forma_pagamento = 'Dinheiro';
 
 select count(*) from cliente
 where mes_cadastro between '2024-08-01' and '2024-08-31';
+
+-- Selects aula 17.09
+select * from cliente 
+where nome_cliente like 'g%' and nome_cliente like '%a';
+
+select * from cliente
+where nome_cliente like '%silva%';
+
+select * from cliente 
+where nome_cliente like  '%a' or  nome_cliente like 'p%';
+
+select sexo, count(id_cliente) from cliente
+group by sexo; 
+
+select idade, count(id_cliente) from cliente
+where idade between 20 and 30
+group by idade
+order by idade asc;
